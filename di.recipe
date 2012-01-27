@@ -6,7 +6,7 @@
 ## Copyright:    przemeq18@wp.pl
 ##
 ## Written:      November 2011
-## Last Edited:  2012-01-25
+## Last Edited:  2012-01-27
 ##
 
 __license__     = 'GNU General Public License v3 - http://www.gnu.org/copyleft/gpl.html'
@@ -24,9 +24,8 @@ import re
 from calibre.web.feeds.recipes import BasicNewsRecipe
 
 class DIRecipe(BasicNewsRecipe):
+    __author__ = 'przemeq'
 
-    # Select / de-select the feeds you want in your ebook.
-    #
     feeds = [
               #(u'Wszystkie wiadomo\u015bci', "http://feeds.feedburner.com/glowny-di"),
 
@@ -46,108 +45,32 @@ class DIRecipe(BasicNewsRecipe):
               (u'Media', "http://feeds.feedburner.com/Media-di"),
             ]
 
-
-    #    **** SELECT YOUR USER PREFERENCES ****
-
-    # Title to use for the ebook.
-    #
     title = u'Dziennik Internaut\u00f3w'
-
-    # A brief description for the ebook.
-    #
     description = u'Dziennik Internaut\u00f3w - wiadomo\u015bci'
+    publisher = 'DI'
 
-    # The max number of articles which may be downloaded from each feed.
-    # I've never seen more than about 70 articles in a single feed in the
-    # BBC feeds.
-    #
     max_articles_per_feed = 30
 
-    # The max age of articles which may be downloaded from each feed. This is
-    # specified in days - note fractions of days are allowed, Eg. 2.5 (2 and a
-    # half days). My default of 1.5 days is the last 36 hours, the point at
-    # which I've decided 'news' becomes 'old news', but be warned this is not
-    # so good for the blogs, technology, magazine, etc., and sports feeds.
-    # You may wish to extend this to 2-5 but watch out ebook creation time will
-    # increase as well. Setting this to 30 will get everything (AFAICT) as long
-    # as max_articles_per_feed remains set high (except for 'Click' which is
-    # v. low volume and its currently oldest article is 4th Feb 2011).
-    #
+    #daily with small overlapping
     oldest_article = 1.2
 
-    # Number of simultaneous downloads. 20 is consistantly working fine on the
-    # BBC News feeds with no problems. Speeds things up from the defualt of 5.
-    # If you have a lot of feeds and/or have increased oldest_article above 2
-    # then you may wish to try increasing simultaneous_downloads to 25-30,
-    # Or, of course, if you are in a hurry. [I've not tried beyond 20.]
-    #
     simultaneous_downloads = 5
-
-    # Timeout for fetching files from the server in seconds. The default of
-    # 120 seconds, seems somewhat excessive.
-    #
-    timeout = 30
-
-    # The format string for the date shown on the ebook's first page.
-    # List of all values: http://docs.python.org/library/time.html
-    # Default in news.py has a leading space so that's mirrored here.
-    # As with 'feeds' select/de-select by adding/removing the initial '#',
-    # only one timefmt should be selected, here's a few to choose from.
-    #
     timefmt = ' [%a, %Y %b %d]'
-    #timefmt = ' [%a, %d %b %Y]'              # [Fri, 14 Nov 2011] (Calibre default)
-    #timefmt = ' [%a, %d %b %Y %H:%M]'       # [Fri, 14 Nov 2011 18:30]
-    #timefmt = ' [%a, %d %b %Y %I:%M %p]'    # [Fri, 14 Nov 2011 06:30 PM]
-    #timefmt = ' [%d %b %Y]'                 # [14 Nov 2011]
-    #timefmt = ' [%d %b %Y %H:%M]'           # [14 Nov 2011 18.30]
-    #timefmt = ' [%Y-%m-%d]'                 # [2011-11-14]
-    #timefmt = ' [%Y-%m-%d-%H-%M]'           # [2011-11-14-18-30]
-
-
-
-    #
-    #    **** IMPORTANT ****
-    #
-    #    DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING.
-    #
-    #    DO NOT EDIT BELOW HERE UNLESS YOU KNOW WHAT YOU ARE DOING.
-    #
-    #    I MEAN IT, YES I DO, ABSOLUTELY, AT YOU OWN RISK. :)
-    #
-    #    **** IMPORTANT ****
-    #
-
-
-
-    # Author of this recipe.
-    __author__ = 'przemeq'
-
-    # Specify English as the language of the RSS feeds (ISO-639 code).
-    language = 'pl_PL'
 
     cover_url = 'http://di.com.pl/pic/logo_di_norm.gif'
 
-    # Set tags.
+    language = 'pl_PL'
     tags = 'news'
 
-    # Set publisher and publication type.
-    publisher = 'DI'
     publication_type = 'newspaper'
 
-    # Specifies an override encoding for sites that have an incorrect charset
-    # specified. Default of 'None' says to auto-detect. Some other BBC recipes
-    # use 'utf8', which works fine (so use that if necessary) but auto-detecting
-    # with None is working fine, so stick with that for robustness.
     encoding = None
 
-    # Sets whether a feed has full articles embedded in it. The BBC feeds do not.
     use_embedded_content = False
 
-    # Removes empty feeds - why keep them!?
+
     remove_empty_feeds = True
-
     remove_javascript = True
-
     extra_css = '#pub_title {margin-bottom:20px}'
 
     preprocess_regexps = [
