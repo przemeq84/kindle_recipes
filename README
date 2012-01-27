@@ -1,4 +1,4 @@
-Repozytorium zawiera recipe dla programu Calibe, które stworzyłem na własne potrzeby. Powstały one ponieważ nie mogłem ich nigdzie znaleźć, albo te które znalazłem nie wyglądały poprawnie na moim czytniku. Inne recipe można znaleźć dostarczone z programem Calibre oraz w repozytorium kalibrator (https://github.com/t3d/kalibrator).
+Repozytorium zawiera recipe dla programu Calibe (http://calibre-ebook.com/), które stworzyłem na własne potrzeby. Powstały one ponieważ nie mogłem ich nigdzie znaleźć, albo te które znalazłem nie wyglądały poprawnie na moim czytniku. Inne recipe można znaleźć dostarczone z programem Calibre oraz w repozytorium kalibrator (https://github.com/t3d/kalibrator).
 
 Większość "przepisów" bazuje na widoku "wydruku" z rodzimej strony. Powoduje to, że lepiej wyglądają na czytniku, ale mogą utracić niektóre formatowanie oraz obrazki. Wszystkie zostały przetesowane na moim czytniku (Kindle 4), ale nie jestem w stanie zagwaratować ich poprawnego działania dla czytników innych firm. W katalogu "exaple" zamieściłem przykładowe ebooki wygenerowane za pomocą recipes, tak aby można było ocenić ich wynik bez potrzeby uruchamiania.
 
@@ -8,7 +8,7 @@ Jeśli znajdziesz jakiś bug, albo chcesz mi przeslać jakieś uwagi, skorzystaj
 ------
 
 
-This repository contains Calibre recipes I created for my personal usage. I wrote them because some didn't exist and some looked crappy on my reader. For more you can also check default Calibre recipes and the kalibrator project (https://github.com/t3d/kalibrator).
+This repository contains Calibre (http://calibre-ebook.com/) recipes I created for my personal usage. I wrote them because some didn't exist and some looked crappy on my reader. For more you can also check default Calibre recipes and the kalibrator project (https://github.com/t3d/kalibrator).
 
 Most of my recipes are based on a "print" view, so ebooks may contain less formatting and less images than created using other recipes. Everything is tested on my device (Kindle 4), but I have no idea how they work for other ones. In the "example" directory I put the sample mobi and epub ebooks, so you can download them and see how they look without a need to run Calibre.
 
