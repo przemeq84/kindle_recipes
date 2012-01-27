@@ -33,17 +33,17 @@ class DIRecipe(BasicNewsRecipe):
               #(u'Tematy Dnia', "http://feeds.feedburner.com/Tematy-Dnia-di"),
               #(u'Najwa\u017cniejsze wiadomo\u015bci', "http://feeds.feedburner.com/Najwazniejsze-di"),
               
-              ("Interwencje", "http://feeds.feedburner.com/interwencje-di"),
-              ("Porady", "http://feeds.feedburner.com/Porady-di"),
-              ("Wywiady", "http://feeds.feedburner.com/Wywiad-di"),
-              ("Listy czytelnik\u00f3w", "http://feeds.feedburner.com/Listy_Czytelnikow-di"),
-              ("Komentarze", "http://feeds.feedburner.com/komentarze-di"),
+              (u'Interwencje', "http://feeds.feedburner.com/interwencje-di"),
+              (u'Porady', "http://feeds.feedburner.com/Porady-di"),
+              (u'Wywiady', "http://feeds.feedburner.com/Wywiad-di"),
+              (u'Listy czytelnik\u00f3w', "http://feeds.feedburner.com/Listy_Czytelnikow-di"),
+              (u'Komentarze', "http://feeds.feedburner.com/komentarze-di"),
 
-              ("Biznes i Prawo", "http://feeds.feedburner.com/Biznes_Finanse_i_Prawo-di"),
-              ("Technologie", "http://feeds.feedburner.com/Rynek_IT-di"),
-              ("Internauci", "http://feeds.feedburner.com/Internauci-di"),
-              ("Bezpiecze\u0144stwo", "http://feeds.feedburner.com/Bezpieczenstwo-di"),
-              ("Media", "http://feeds.feedburner.com/Media-di"),
+              (u'Biznes i Prawo', "http://feeds.feedburner.com/Biznes_Finanse_i_Prawo-di"),
+              (u'Technologie', "http://feeds.feedburner.com/Rynek_IT-di"),
+              (u'Internauci', "http://feeds.feedburner.com/Internauci-di"),
+              (u'Bezpiecze\u0144stwo', "http://feeds.feedburner.com/Bezpieczenstwo-di"),
+              (u'Media', "http://feeds.feedburner.com/Media-di"),
             ]
 
 
@@ -51,7 +51,7 @@ class DIRecipe(BasicNewsRecipe):
 
     # Title to use for the ebook.
     #
-    title = 'Dziennik Internaut\u00f3w'
+    title = u'Dziennik Internaut\u00f3w'
 
     # A brief description for the ebook.
     #
@@ -147,8 +147,6 @@ class DIRecipe(BasicNewsRecipe):
     remove_empty_feeds = True
 
     remove_javascript = True
-
-    encoding = 'utf-8'
 
     extra_css = '#pub_title {margin-bottom:20px}'
 
